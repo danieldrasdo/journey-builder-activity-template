@@ -23,7 +23,7 @@
           "contactIdentifier": "{{Contact.Key}}"
         },
         {
-          "firstName": "{{Contact.CustomerProfile.FirstName}}"
+          "firstName": "{{Contact.Attribute.CustomerProfile.FirstName}}"
         }
 			],
           "outArguments": [],
