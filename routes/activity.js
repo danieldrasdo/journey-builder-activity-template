@@ -29,13 +29,13 @@ function logData(req) {
         secure: req.secure,
         originalUrl: req.originalUrl
     });
-    console.log("body: " + util.inspect(req.body));
+    console.log("body: " + util.inspect(req.body, false, null, true));
     console.log("headers: " + req.headers);
     console.log("trailers: " + req.trailers);
     console.log("method: " + req.method);
     console.log("url: " + req.url);
-    console.log("params: " + util.inspect(req.params));
-    console.log("query: " + util.inspect(req.query));
+    console.log("params: " + util.inspect(req.params, false, null, true));
+    console.log("query: " + util.inspect(req.query, false, null, true));
     console.log("route: " + req.route);
     console.log("cookies: " + req.cookies);
     console.log("ip: " + req.ip);
@@ -53,7 +53,7 @@ function logData(req) {
  */
 exports.edit = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log( req.body );
     logData(req);
     res.send(200, 'Edit');
 };
@@ -63,7 +63,7 @@ exports.edit = function (req, res) {
  */
 exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log( req.body );
     logData(req);
     res.send(200, 'Save');
 };
@@ -83,10 +83,10 @@ exports.execute = function (req, res) {
         }
 
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-            
+
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
-            
+
             logData(req);
             res.send(200, 'Execute');
         } else {
@@ -102,7 +102,7 @@ exports.execute = function (req, res) {
  */
 exports.publish = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log( req.body );
     logData(req);
     res.send(200, 'Publish');
 };
@@ -112,7 +112,7 @@ exports.publish = function (req, res) {
  */
 exports.validate = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log( req.body );
     logData(req);
     res.send(200, 'Validate');
 };
