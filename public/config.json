@@ -17,13 +17,13 @@
         "execute": {
            "inArguments":[
 				{
-          "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
+          "emailAddress": "{{Contact.Attribute.DanielTestMembersJourney.EmailAddress}}"
         },
         {
           "contactIdentifier": "{{Contact.Key}}"
         },
         {
-          "firstName": "{{Contact.Attribute.CustomerProfile.FirstName}}"
+          "firstName": "{{Contact.Attribute.DanielTestMembersJourney.FirstName}}"
         }
 			],
           "outArguments": [],
